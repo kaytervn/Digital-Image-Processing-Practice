@@ -1,0 +1,3 @@
+cd D:\OTHER_DOCUMENTS\Github\Python_Programming_Notes\XuLyAnhSo\labelImg
+pyrcc5 -o libs/resources.py resources.qrc
+python labelImg.py D:\OTHER_DOCUMENTS\Github\Python_Programming_Notes\XuLyAnhSo\dnn_object_detect\nhan_dang_trai_cay\trai_cay_640x640\buoi D:\OTHER_DOCUMENTS\Github\Python_Programming_Notes\XuLyAnhSo\dnn_object_detect\nhan_dang_trai_cay\trai_cay_640x640\trai_cay.txt
