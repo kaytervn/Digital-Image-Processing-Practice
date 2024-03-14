@@ -75,7 +75,7 @@ class App(tk.Tk):
         super().__init__()
         self.resizable(False, False)
         self.filename = None
-        self.title("Road Signs Detection")
+        self.title("Fruits Detection")
         self.cvs_image = tk.Canvas(
             self, width=inpWidth, height=inpHeight, relief=tk.SUNKEN, border=1
         )
