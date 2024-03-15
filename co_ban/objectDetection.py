@@ -24,8 +24,8 @@ def detectAndDisplay(frame):
     cv.imshow("Capture - Face detection", frame)
 
 
-face_cascade_name = "XuLyAnhSo\co_ban\haarcascade_frontalface_alt.xml"
-eyes_cascade_name = "XuLyAnhSo\co_ban\haarcascade_eye_tree_eyeglasses.xml"
+face_cascade_name = "haarcascade_frontalface_alt.xml"
+eyes_cascade_name = "haarcascade_eye_tree_eyeglasses.xml"
 
 face_cascade = cv.CascadeClassifier()
 eyes_cascade = cv.CascadeClassifier()

@@ -38,14 +38,14 @@ parser.add_argument(
     "--face_detection_model",
     "-fd",
     type=str,
-    default="XuLyAnhSo\\dnn_face_detect\\face_detection_yunet_2023mar.onnx",
+    default="face_detection_yunet_2023mar.onnx",
     help="Path to the face detection model. Download the model at https://github.com/opencv/opencv_zoo/tree/master/models/face_detection_yunet",
 )
 parser.add_argument(
     "--face_recognition_model",
     "-fr",
     type=str,
-    default="XuLyAnhSo\\dnn_face_detect\\face_recognition_sface_2021dec.onnx",
+    default="face_recognition_sface_2021dec.onnx",
     help="Path to the face recognition model. Download the model at https://github.com/opencv/opencv_zoo/tree/master/models/face_recognition_sface",
 )
 parser.add_argument(
