@@ -1,7 +1,0 @@
-Chạy cmd bằng lệnh:
-D:
-cd D:\OTHER_DOCUMENTS\Github\Python_Programming_Notes\XuLyAnhSo\dnn_object_detect\web_service
-python object_detector.py
-
-Sau đó, Mở đường dẫn sau trên trình duyệt: 
-http:///localhost:8080
