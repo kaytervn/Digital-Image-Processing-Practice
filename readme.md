@@ -163,4 +163,4 @@ model = YOLO("best.pt")
 path = model.export(format="onnx")
 ```
 
-**5.** Finally, download model `best.onnx`.
+**5.** Finally, download the model `best.onnx`.
