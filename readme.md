@@ -13,7 +13,7 @@
 | **Face Detection with Custom Dataset** | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_khuon_mat_onnx) | Collect image stocks from people to create a dataset for training detection.                  |
 | **Negative Image Processing**          |     [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/xu_ly_anh_am_ban)     | Browse an image to export negative version.                                                   |
 
-<h1>Object Detection</h1>
+<h1 align="center">Object Detection</h1>
 
 <h2>Run file `object_detection.py` on CMD:</h2>
 
