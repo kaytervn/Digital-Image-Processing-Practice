@@ -15,7 +15,7 @@
 
 <h1>Object Detection</h1>
 
-<h2>Chạy trên CMD:</h2>
+<h2>Run file `object_detection.py` on CMD:</h2>
 
 **Image Detection:**
 
@@ -29,11 +29,11 @@ python object_detection.py --input=image01.jpg --model=yolov8n.onnx --scale=0.00
 python object_detection.py --input= --model=yolov8n.onnx --scale=0.00392 --width=640 --height=640 --rgb --postprocessing=yolov8 --classes=object_detection_classes_yolo.txt
 ```
 
-<h2>Chạy trên VSCode:</h2>
+<h2>Run on VS Code (Code Editor):</h2>
 
-**1.** Tạo file json trong mục Debug: Current File -> Tạo file `launch.json` nằm trong thư mục `.vscode`
+**1.** At `Debug` section: Current File -> Create file `launch.json`, it automatically appear in the folder `.vscode`
 
-**2.** Thêm args, với model và classes tương ứng:
+**2.** Open `launch.json`, add arguments with specific `model` and `classes` name:
 
 ```json
    "args": [
@@ -56,46 +56,46 @@ python object_detection.py --input= --model=yolov8n.onnx --scale=0.00392 --width
 ```
 
 - Real time Camera:
-  - Đổi dòng code trong `object_detection.py`:
+  - Change the figure of video capture to 0 in file `object_detection.py`:
 
 ```py
 cap = cv.VideoCapture(0)
 ```
 
-**3.** Chọn Run -> Run Without Debugging
+**3.** Click `Run` on the top menu bar -> Run Without Debugging
 
 <h1>Web Service</h1>
 
-[ <i>Có thể đổi lại model `best.pt`</i> ]
+[<i>You can change the model `best.pt`</i>]
 
-**1.** Chạy CMD và cd tới đường dẫn chứa folder `web_service`:
+**1.** Run CMD and cd to the path containing the folder `web_service`:
 
 ```cmd
 cd D:\..\..\dnn_object_detect\web_service
 python object_detector.py
 ```
 
-**2.** Sau đó, Mở đường dẫn sau trên trình duyệt: `http:///localhost:8080`
+**2.** Finally, access this URL: `http:///localhost:8080`
 
-<h1>Đánh nhãn hình ảnh</h1>
+<h1>Labeling Images</h1>
 
-**1.** Chuẩn hóa hết tệp ảnh thành 640x640 bằng file `chuan_hoa_anh_640x640.py` trong folder `nhan_dang_trai_cay`.
+**1.** Format all the images file into 640x640 images by running file `chuan_hoa_anh_640x640.py` in the folder `nhan_dang_trai_cay`.
 
-**2.** Tải source code: https://github.com/HumanSignal/labelImg
+**2.** Install source code: https://github.com/HumanSignal/labelImg
 
-**3.** Chạy CMD và cd tới folder `labelImg`:
+**3.** Run CMD and cd to the folder `labelImg`:
 
 ```cmd
 cd D:\..\..\labelImg
 ```
 
-**4.** Sau đó, nhập:
+**4.** Then, enter this command line:
 
 ```cmd
 pyrcc5 -o libs/resources.py resources.qrc
 ```
 
-**5.** Cuối cùng, chạy file `labelImg.py` để khởi tạo ứng dụng đánh nhãn (cd tới đường dẫn chứa folder của kho ảnh và file tên các class):
+**5.** Finally, run file `labelImg.py` to start the image labeling app (cd to the path containing an `images folder` and a `class name` file):
 
 ```cmd
 python labelImg.py D:\..\..\trai_cay_640x640\sau_rieng D:\..\..\trai_cay.txt
@@ -103,35 +103,35 @@ python labelImg.py D:\..\..\trai_cay_640x640\sau_rieng D:\..\..\trai_cay.txt
 
 <h1>Training YOLOv8</h1>
 
-|                                   | Step-by-step                                                                                                                                                           |
+|Tutorial|                                                                                                                                                            |
 | :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Free Code Camp**                | [LINK](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/)                                                                                |
 | **Roboflow (tác giả của yolov8)** | [LINK](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/train-yolov8-object-detection-on-custom-dataset.ipynb#scrollTo=FyRdDYkqAKN4) |
 
-<h2>Train trên Google Colaboratory</h2>
+<h2>Training on Google Colaboratory</h2>
 
-**1.** Upload dataset lên Google Drive.
+**1.** Upload the dataset to Google Drive.
 
-**2.** Tạo file notebook `.ipynb`.
+**2.** Create a notebook file `.ipynb`.
 
-**3.** Trên thanh menu, Chỉnh sửa -> cài đặt sổ tay -> tích vào `T4 GPU`.
+**3.** On the menu bar, Edit -> Notebook settings -> tick `T4 GPU`.
 
-**4.** Thực hiện chạy các lệnh sau:
+**4.** Enter these command lines:
 
-**Kết nối với Google Drive**
+**Connect to Google Drive**
 
 ```py
 from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-**Chuyển tới thư mục chứa dataset**
+**Move to the path containing your dataset**
 
 ```py
 %cd '/content/drive/MyDrive/TrainingYOLOv8/trai_cay_yolo8'
 ```
 
-**Tải thư viện `ultralytics`**
+**Install library `ultralytics`**
 
 ```py
 !pip install ultralytics
@@ -144,23 +144,23 @@ from ultralytics import YOLO
 model = YOLO("yolov8m.pt")
 ```
 
-**Bắt đầu train với 30 epoch**
+**Start training**
 
 ```py
 model.train(data="data.yaml", epochs=30)
 ```
 
-**Chuyển hướng tới thư mục chứa model đã train**
+**Move to the folder containing trained model**
 
 ```py
 %cd '/content/drive/MyDrive/TrainingYOLOv8/trai_cay_yolo8/runs/detect/train2/weights'
 ```
 
-**Chuyển định dạng thành `.onnx`**
+**Format the model to `.onnx`**
 
 ```py
 model = YOLO("best.pt")
 path = model.export(format="onnx")
 ```
 
-**5.** Tải file `best.onnx`.
+**5.** Finally, download model `best.onnx`.
