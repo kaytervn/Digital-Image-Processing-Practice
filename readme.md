@@ -33,7 +33,7 @@ python object_detection.py --input= --model=yolov8n.onnx --scale=0.00392 --width
 
 **1.** At `Debug` section: Current File -> Create file `launch.json`, it automatically appear in the folder `.vscode`
 
-**2.** Open `launch.json`, add arguments with specific `model` and `classes` name:
+**2.** Open `launch.json`, add arguments with a specific `model` and a `classes` file name:
 
 ```json
    "args": [
