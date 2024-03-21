@@ -5,13 +5,13 @@
 
 ---
 
-|                                        |                                                Directory                                                | Description                                                                                   |
-| :------------------------------------- | :-----------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------- |
-| **Basic**                              |          [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/co_ban)          | Display images, face and eyes regconition, take camera screenshots.                           |
-| **Face Detection**                     |     [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_face_detect)      | Face detection with presenting eye, nose, and mouth coordinates.                              |
+|                                        |                                                Directory                                                | Description                                                                                      |
+| :------------------------------------- | :-----------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------ |
+| **Basic**                              |          [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/co_ban)          | Display images, face and eyes regconition, take camera screenshots.                              |
+| **Face Detection**                     |     [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_face_detect)      | Face detection with presenting eye, nose, and mouth coordinates.                                 |
 | **Object Detection**                   |    [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_object_detect)     | Import custom datasets, create tkinter GUI and local web service to upload images for detection. |
-| **Face Detection with Custom Dataset** | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_khuon_mat_onnx) | Collect image shots from people to create a dataset for training detection.                  |
-| **Negative Image Processing**          |     [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/xu_ly_anh_am_ban)     | Browse an image to export the negative version.                                                   |
+| **Face Detection with Custom Dataset** | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_khuon_mat_onnx) | Collect image shots from people to create a dataset for training detection.                      |
+| **Image Processing**                   |     [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/xu_ly_anh_am_ban)     | Browse an image to process.                                                                      |
 
 <h1 align="center">Object Detection</h1>
 
@@ -103,10 +103,10 @@ python labelImg.py D:\..\..\trai_cay_640x640\sau_rieng D:\..\..\trai_cay.txt
 
 <h1>Training YOLOv8</h1>
 
-|Tutorial|                                                                                                                                                            |
-| :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Free Code Camp**                | [LINK](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/)                                                                                |
-| **Roboflow (tác giả của yolov8)** | [LINK](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/train-yolov8-object-detection-on-custom-dataset.ipynb#scrollTo=FyRdDYkqAKN4) |
+| Tutorial                     |                                                                                                                                                                        |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Free Code Camp**           | [LINK](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/)                                                                                |
+| **Roboflow (yolov8 author)** | [LINK](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/train-yolov8-object-detection-on-custom-dataset.ipynb#scrollTo=FyRdDYkqAKN4) |
 
 <h2>Training on Google Colaboratory</h2>
 
