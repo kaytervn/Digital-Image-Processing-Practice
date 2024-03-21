@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 
 L = 256
 
@@ -37,5 +38,42 @@ def Logarit(imgin):
             if r == 0:
                 r = 1
             s = c * np.log(1.0 + r)
+            imgout[x, y] = np.uint8(s)
+    return imgout
+
+
+def Power(imgin):
+    M, N = imgin.shape
+    imgout = np.zeros((M, N), np.uint8) + 255
+    gamma = 5.0
+    c = np.power(L - 1, 1 - gamma)
+    for x in range(0, M):
+        for y in range(0, N):
+            r = imgin[x, y]
+            s = c * np.power(r, gamma)
+            imgout[x, y] = np.uint8(s)
+    return imgout
+
+
+def PiecewiseLinear(imgin):
+    M, N = imgin.shape
+    imgout = np.zeros((M, N), np.uint8) + 255
+    rmin, rmax, _, _ = cv2.minMaxLoc(imgin)
+    r1 = rmin
+    s1 = 0
+    r2 = rmax
+    s2 = L - 1
+    for x in range(0, M):
+        for y in range(0, N):
+            r = imgin[x, y]
+            # Đoạn I
+            if r < r1:
+                s = s1 * r / r1
+            # Đoạn II
+            elif r < r2:
+                s = (s2 - s1) * (r - r1) / (r2 - r1) + s1
+            # Đoạn II
+            else:
+                s = (L - 1 - s2) * (r - r2) / (L - 1 - r2) + s2
             imgout[x, y] = np.uint8(s)
     return imgout

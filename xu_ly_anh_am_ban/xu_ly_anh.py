@@ -35,6 +35,11 @@ class App(tk.Tk):
             label="Negative Color", command=self.mnu_c3_negative_color_click
         )
         chapter3_menu.add_command(label="Logarit", command=self.mnu_c3_logarit_click)
+        chapter3_menu.add_command(label="Power", command=self.mnu_c3_power_click)
+        chapter3_menu.add_command(
+            label="Piecewise Linear", command=self.mnu_c3_piecewise_linear_click
+        )
+
         menu.add_cascade(label="Chapter3", menu=chapter3_menu)
         self.config(menu=menu)
 
@@ -70,6 +75,14 @@ class App(tk.Tk):
 
     def mnu_c3_logarit_click(self):
         self.imgout = Logarit(self.imgin)
+        cv2.imshow("ImageOut", self.imgout)
+
+    def mnu_c3_power_click(self):
+        self.imgout = Power(self.imgin)
+        cv2.imshow("ImageOut", self.imgout)
+
+    def mnu_c3_piecewise_linear_click(self):
+        self.imgout = PiecewiseLinear(self.imgin)
         cv2.imshow("ImageOut", self.imgout)
 
 
