@@ -30,21 +30,30 @@ class App(tk.Tk):
         self.title("Nhận dạng chữ số MNIST")
         self.data = None
         self.image_tk = None
+        self.lbl_predict = tk.Label(
+            self, height=11, relief=tk.SUNKEN, border=1, font=("Consolas", 15)
+        )
         self.tao_anh_ngau_nhien()
         self.cvs_image = tk.Canvas(
             self, width=28 * 10, height=28 * 10, relief=tk.SUNKEN, border=1
         )
         self.cvs_image.create_image(0, 0, anchor=tk.NW, image=self.image_tk)
         lbl_frm_menu = tk.LabelFrame(self)
-        btn_create_image = tk.Button(lbl_frm_menu, text="Create Image")
-        btn_predict = tk.Button(lbl_frm_menu, text="Predict")
+        btn_create_image = tk.Button(
+            lbl_frm_menu, text="Create Image", command=self.btn_create_image_click
+        )
+        btn_predict = tk.Button(
+            lbl_frm_menu, text="Predict", command=self.btn_predict_click
+        )
         btn_create_image.grid(row=0, column=0, padx=5, pady=5)
         btn_predict.grid(row=1, column=0, padx=5, pady=5, sticky=tk.EW)
 
         self.cvs_image.grid(row=0, column=0, padx=5, pady=5)
         lbl_frm_menu.grid(row=0, column=1, padx=5, pady=7, sticky=tk.NW)
+        self.lbl_predict.grid(row=1, column=0, padx=5, pady=5, sticky=tk.EW)
 
     def tao_anh_ngau_nhien(self):
+        self.lbl_predict.config(text="")
         # Tạo 100 số nguyên ngẫu nhiên nằm trong phạm vi [0, 9999]
         index = np.random.randint(0, 9999, 100)
         sample = np.zeros((100, 28, 28, 1))
@@ -67,6 +76,27 @@ class App(tk.Tk):
         self.data = sample / 255.0
         # cast
         self.data = self.data.astype("float32")
+
+    def btn_predict_click(self):
+        ket_qua = model.predict(self.data, verbose=0)
+        chu_so = []
+        for i in range(0, 100):
+            x = np.argmax(ket_qua[i])
+            chu_so.append(x)
+        s = ""
+        dem = 0
+        for x in chu_so:
+            s += str(x) + " "
+            dem += 1
+            if dem % 10 == 0:
+                s += "\n"
+
+        self.lbl_predict.config(text=s)
+
+    def btn_create_image_click(self):
+        self.tao_anh_ngau_nhien()
+        self.cvs_image.create_image(0, 0, anchor=tk.NW, image=self.image_tk)
+        self.cvs_image.update()
 
 
 if __name__ == "__main__":
