@@ -44,4 +44,17 @@ data = sample / 255.0
 # cast
 data = data.astype("float32")
 
+ket_qua = model.predict(data, verbose=0)
+chu_so = []
+for i in range(0, 100):
+    x = np.argmax(ket_qua[i])
+    chu_so.append(x)
+
+dem = 0
+for x in chu_so:
+    print("%d " % x, end=" ")
+    dem += 1
+    if dem % 10 == 0:
+        print()
+
 cv2.waitKey(0)
