@@ -73,4 +73,3 @@ model_json = model.to_json()
 with open("digit_config.json", "w") as json_file:
     json_file.write(model_json)
 model.save_weights("digit_weight.h5")
-
