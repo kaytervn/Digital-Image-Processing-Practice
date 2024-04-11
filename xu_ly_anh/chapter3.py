@@ -77,3 +77,41 @@ def PiecewiseLinear(imgin):
                 s = (L - 1 - s2) * (r - r2) / (L - 1 - r2) + s2
             imgout[x, y] = np.uint8(s)
     return imgout
+
+
+def Histogram(imgin):
+    M, N = imgin.shape
+    imgout = np.zeros((M, L), np.uint8) + 255
+    h = np.zeros(L, np.int32)
+    for x in range(0, M):
+        for y in range(0, N):
+            r = imgin[x, y]
+            h[r] += 1
+    p = h / (M * N)
+    scale = 3000
+    for r in range(0, L):
+        cv2.line(imgout, (r, M - 1), (r, M - 1 - int(scale * p[r])), (0, 0, 0))
+    return imgout
+
+
+def HistEqual(imgin):
+    M, N = imgin.shape
+    imgout = np.zeros((M, N), np.uint8)
+    h = np.zeros(L, np.int32)
+    for x in range(0, M):
+        for y in range(0, N):
+            r = imgin[x, y]
+            h[r] = h[r] + 1
+    p = h / (M * N)
+
+    s = np.zeros(L, np.float32)
+    for k in range(0, L):
+        for j in range(0, k + 1):
+            s[k] = s[k] + p[j]
+        s[k] = (L - 1) * s[k]
+
+    for x in range(0, M):
+        for y in range(0, N):
+            r = imgin[x, y]
+            imgout[x, y] = np.uint8(s[r])
+    return imgout

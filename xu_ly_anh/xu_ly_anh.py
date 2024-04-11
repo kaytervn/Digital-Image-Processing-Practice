@@ -39,6 +39,12 @@ class App(tk.Tk):
         chapter3_menu.add_command(
             label="Piecewise Linear", command=self.mnu_c3_piecewise_linear_click
         )
+        chapter3_menu.add_command(
+            label="Histogram", command=self.mnu_c3_histogram_click
+        )
+        chapter3_menu.add_command(
+            label="Hist Equal", command=self.mnu_c3_hist_equal_click
+        )
 
         menu.add_cascade(label="Chapter3", menu=chapter3_menu)
         self.config(menu=menu)
@@ -83,6 +89,14 @@ class App(tk.Tk):
 
     def mnu_c3_piecewise_linear_click(self):
         self.imgout = PiecewiseLinear(self.imgin)
+        cv2.imshow("ImageOut", self.imgout)
+
+    def mnu_c3_histogram_click(self):
+        self.imgout = Histogram(self.imgin)
+        cv2.imshow("ImageOut", self.imgout)
+
+    def mnu_c3_hist_equal_click(self):
+        self.imgout = HistEqual(self.imgin)
         cv2.imshow("ImageOut", self.imgout)
 
 
