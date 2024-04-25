@@ -12,7 +12,7 @@
 | **Object Detection**                   |      [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_object_detect)       | Import custom datasets, create tkinter GUI and local web service to upload images for detection. |
 | **Face Detection with Custom Dataset** |   [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_khuon_mat_onnx)   | Collect image shots from people to create a dataset for training detection.                      |
 | **Image Processing**                   |          [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/xu_ly_anh)           | Browse an image to process (adjusting brightness).                                               |
-| **Handwriting Detection**              | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_chu_viet_tay_mnist) | Detect handwritting numbers.                                                                     |
+| **Handwriting Detection**              | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_chu_viet_tay_mnist) | Handwritten digit regconition.                                                                   |
 
 <h1 align="center">Object Detection</h1>
 
