@@ -7,7 +7,7 @@
 
 |                                        |                                                  Directory                                                  | Description                                                                                      |
 | :------------------------------------- | :---------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------ |
-| **Basic**                              |            [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/co_ban)            | Display images, face and eyes regconition, take camera screenshots.                              |
+| **Basic**                              |            [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/co_ban)            | Display images, face and eyes recognition, take camera screenshots.                              |
 | **Face Detection**                     |       [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_face_detect)        | Face detection showing coordinates of eye, nose, and mouth.                                      |
 | **Object Detection**                   |      [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_object_detect)       | Import custom datasets, create tkinter GUI and local web service to upload images for detection. |
 | **Face Detection with Custom Dataset** |   [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_khuon_mat_onnx)   | Collect image shots from people to create a dataset for training detection.                      |
