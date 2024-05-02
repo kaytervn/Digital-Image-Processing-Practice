@@ -4,7 +4,6 @@ import joblib
 
 face_detection_model = "../model/face_detection_yunet_2023mar.onnx"
 face_recognition_model = "../model/face_recognition_sface_2021dec.onnx"
-input_image = "test/road_sign.jpg"
 score_threshold = 0.9
 nms_threshold = 0.3
 top_k = 5000
