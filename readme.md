@@ -11,9 +11,9 @@ This repository contains practical exercises for the **Digital Image Processing*
 | **Image Processing**                   |          [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/xu_ly_anh)           | Browse an image to process (adjusting brightness).                                               |
 | **Handwriting Detection**              | [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/nhan_dang_chu_viet_tay_mnist) | Handwritten digit regconition.                                                                   |
 
-<h1 align="center">Object Detection</h1>
+<h2>Object Detection</h2>
 
-<h2>Run file `object_detection.py` on CMD:</h2>
+<h3>Run file `object_detection.py` on CMD:</h3>
 
 **Image Detection:**
 
@@ -27,7 +27,7 @@ python object_detection.py --input=image01.jpg --model=yolov8n.onnx --scale=0.00
 python object_detection.py --input= --model=yolov8n.onnx --scale=0.00392 --width=640 --height=640 --rgb --postprocessing=yolov8 --classes=object_detection_classes_yolo.txt
 ```
 
-<h2>Run on VS Code (Code Editor):</h2>
+<h3>Run on VS Code (Code Editor):</h3>
 
 **1.** At `Debug` section: Current File -> Create file `launch.json`, it automatically appear in the folder `.vscode`
 
@@ -62,7 +62,7 @@ cap = cv.VideoCapture(0)
 
 **3.** Click `Run` on the top menu bar -> Run Without Debugging
 
-<h1>Web Service</h1>
+<h2>Web Service</h2>
 
 [<i>You can change the model `best.pt`</i>]
 
@@ -75,7 +75,7 @@ python object_detector.py
 
 **2.** Finally, access this URL: `http:///localhost:8080`
 
-<h1>Labeling Images</h1>
+<h2>Labeling Images</h2>
 
 **1.** Format all the images file into 640x640 images by running file `chuan_hoa_anh_640x640.py` in the folder `nhan_dang_trai_cay`.
 
@@ -99,7 +99,7 @@ pyrcc5 -o libs/resources.py resources.qrc
 python labelImg.py D:\..\..\trai_cay_640x640\sau_rieng D:\..\..\trai_cay.txt
 ```
 
-<h1>Training YOLOv8</h1>
+<h2>Training YOLOv8</h2>
 
 | Tutorial                     |                                                                                                                                                                        |
 | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
