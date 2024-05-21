@@ -27,6 +27,8 @@ python object_detection.py --input=image01.jpg --model=yolov8n.onnx --scale=0.00
 python object_detection.py --input= --model=yolov8n.onnx --scale=0.00392 --width=640 --height=640 --rgb --postprocessing=yolov8 --classes=object_detection_classes_yolo.txt
 ```
 
+---
+
 <h3>Run on VS Code (Code Editor):</h3>
 
 **1.** At `Debug` section: Current File -> Create file `launch.json`, it automatically appear in the folder `.vscode`
