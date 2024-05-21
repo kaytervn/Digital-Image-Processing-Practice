@@ -2,7 +2,7 @@
 
 This repository contains practical exercises for the **Digital Image Processing** course, utilizing the OpenCV library and programming in the Python language with the Tkinter GUI. To run a demo program for the specific content, please open the folder containing that content.
 
-|                                        |                                                  Directory                                                  | Description                                                                                      |
+| Content                                |                                                  Directory                                                  | Description                                                                                      |
 | :------------------------------------- | :---------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------ |
 | **Basic**                              |            [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/co_ban)            | Display images, face and eyes recognition, take camera screenshots.                              |
 | **Face Detection**                     |       [DIR](https://github.com/kaytervn/Digital-Image-Processing-Practice/tree/main/dnn_face_detect)        | Face detection showing coordinates of eye, nose, and mouth.                                      |
