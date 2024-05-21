@@ -1,9 +1,6 @@
-|                 | Digital Image Processing                |
-| :-------------- | :-------------------------------------- |
-| **Library**     | OpenCV2                                 |
-| **Run Program** | Open a specific folder to run the demo. |
+<h1 align="center">Digital Image Processing Practice</h1>
 
----
+This repository contains practical exercises for the Digital Image Processing course, utilizing the OpenCV library and programming in the Python language with the Tkinter GUI. To run a demo program for the specific content, please open the folder containing that content.
 
 |                                        |                                                  Directory                                                  | Description                                                                                      |
 | :------------------------------------- | :---------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------ |
